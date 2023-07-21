@@ -23,8 +23,8 @@ VALIDATE_IP_OF_SESSION = False  # Token instantly expires in case server receive
 
 
 # Posts config #
-POST_MAX_CONTENT_LENGTH = 500
-POST_MIN_TITLE_LENGTH = 3
-POST_MAX_TITLE_LENGTH = 50
-POST_MAX_RECEIVE_LIMIT = 400
+POST_MAX_CONTENT_LENGTH = 500  # Max length of post content (body)
+POST_MIN_TITLE_LENGTH = 3  # Min length of post title
+POST_MAX_TITLE_LENGTH = 50  # Max length of post title
+POST_MAX_RECEIVE_LIMIT = 400  # Max amount of posts that server will fetch from the top
 # # # # # # # #
