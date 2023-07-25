@@ -39,9 +39,9 @@ MIN_NICKNAME_LENGTH = 4  # Must be set
 
 
 # Session config #
-SESSION_LIFESPAN_MINUTES = 30  # If None, session is infinite until user logs out, else pass lifespan in minutes
+SESSION_LIFESPAN_MINUTES = 30  # If None, session is infinite until user logs out, else set lifespan in minutes
 MAX_SESSIONS_ALLOWED = 1  # Max sessions that can be opened for 1 nickname
-VALIDATE_IP_OF_SESSION = False  # Token instantly expires in case server receive request with this token
+VALIDATE_IP_OF_SESSION = False  # Token instantly expires in case server receives request with this token
 # but from IP different from which token was requested from originally. Recommended: False
 # # # # # # # # # #
 
