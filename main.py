@@ -203,6 +203,7 @@ async def posts_new(jwt_token: str, title: str, content: str, request: Request):
 
 @app.get("/posts/get_all")
 async def posts_get_all(limit: int | None = config.POST_MAX_RECEIVE_LIMIT) -> list[Post]:
+	"""Get all newest posts. `limit` argument limits amount of posts fetched (default is set by server config)"""
 	# This method does not require validation, cuz posts are public to fetch
 
 	posts, fetch_status = await db.get_posts(limit=limit)
