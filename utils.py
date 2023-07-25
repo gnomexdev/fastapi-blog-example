@@ -43,8 +43,8 @@ def password_to_hash(password: str, salt: bytes) -> bytes | None:
 def check_post(title: str = None, content: str = None):
 	if not title and not content:
 		return False
-	return (config.POST_MIN_TITLE_LENGTH <= len(title) <= config.POST_MAX_TITLE_LENGTH) \
-		if title else True and (1 <= len(content) <= config.POST_MAX_CONTENT_LENGTH) if content else True
+	return ((config.POST_MIN_TITLE_LENGTH <= len(title) <= config.POST_MAX_TITLE_LENGTH) \
+		if title else True) and ((1 <= len(content) <= config.POST_MAX_CONTENT_LENGTH) if content else True)
 
 
 def check_id(id_: int):
