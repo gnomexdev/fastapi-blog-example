@@ -47,7 +47,7 @@ async def token_validation(jwt_token: str, request: Request) -> tuple[dict | HTT
 			else:
 				if client_host != token_ip[jwt_token]:
 					await db.expire_token(jwt_token)  # expiring token that got exposed
-					raise HTTPException(400, messages.IP_VALIDATE_ERROR)
+					raise HTTPException(400, messages.IP_VALIDATE_ERROR), False
 
 		return payload, True
 	elif decode_status == _auth.DecodeStatus.SIGN_EXPIRED:
