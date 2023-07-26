@@ -88,7 +88,7 @@ Create new token and expire previous. Takes `jwt_token`, responds with new `jwt_
 
 #### /posts/get_all
 Get all posts on server. Takes `limit` argument optionally,
-which limits output length to this size.
+which limits output array length.
 
 <hr>
 
