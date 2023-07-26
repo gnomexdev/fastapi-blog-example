@@ -1,5 +1,6 @@
 from builtins import print as _print
 from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import RedirectResponse
 import auth as _auth
 import config
 import messages
@@ -60,6 +61,11 @@ async def token_validation(jwt_token: str, request: Request) -> tuple[dict | HTT
 	else:
 		print(f"token_validation exception, jwt_token: {jwt_token}; client host: {client_host}; decode_status {decode_status}")
 		return HTTPException(405, messages.UNKNOWN_ERROR), False
+
+
+@app.get("/")
+async def docs_redirect():
+	return RedirectResponse(url='/docs')  # redirecting to documentation
 
 
 # =====================================================================================
