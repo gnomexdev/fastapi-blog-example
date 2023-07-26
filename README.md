@@ -15,12 +15,12 @@
 3. To stop, use Ctrl-C
 
 # API
-### Docs
+## Docs
 ReDoc documentation is available at: __http://[host]:[port]/redoc__
 
 OpenAPI documentation is available at __http://[host]:[port]/docs__
 
-# Configuration
+## Configuration
 ```python
 DEBUG = False  # If true some specific runtime debug logs will print into console
 
